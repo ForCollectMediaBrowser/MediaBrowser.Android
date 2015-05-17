@@ -14,10 +14,11 @@ import android.widget.TextView;
 import com.android.volley.toolbox.NetworkImageView;
 import com.mb.android.MainApplication;
 import com.mb.android.R;
+import com.mb.android.logging.AppLogger;
+
 import mediabrowser.model.dto.BaseItemDto;
 import mediabrowser.model.dto.ImageOptions;
 import mediabrowser.model.entities.ImageType;
-import com.mb.android.logging.AppLogger;
 
 /**
  * Created by Mark on 12/12/13.
@@ -136,7 +137,7 @@ public class HomeScreenItemsAdapter extends BaseAdapter {
             }
         }
 
-        boolean showText = false;
+        boolean showText = true;
 
         try {
 

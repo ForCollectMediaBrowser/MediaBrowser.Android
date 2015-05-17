@@ -18,10 +18,6 @@
     <!-- Required because we're manually creating a new account. -->
     <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
 
-    <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="21" />
-
     <application
         android:name=".MainApplication"
         android:allowBackup="true"
@@ -147,47 +143,7 @@
         </activity>
 
         <activity
-            android:name=".ui.tv.homescreen.HomeScreenActivity"
-            android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"/>
-
-        <activity
-            android:name=".ui.tv.library.LibraryActivity"
-            android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"/>
-
-        <activity
-            android:name=".ui.tv.mediadetails.MediaDetailsActivity"
-            android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"/>
-
-        <activity
-            android:name=".ui.tv.boxset.BoxSetActivity"
-            android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"/>
-
-        <activity
-            android:name=".ui.tv.person.ActorDetailsActivity"
-            android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"/>
-
-        <activity
             android:name=".ui.OverscanActivity"
-            android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"/>
-
-        <activity
-            android:name=".ui.tv.playback.VideoPlayer"
-            android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"/>
-
-        <activity
-            android:name=".ui.tv.playback.AudioPlayer"
-            android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"/>
-
-        <activity
-            android:name=".ui.tv.playback.PhotoPlayer"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"/>
 
