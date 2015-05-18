@@ -35,9 +35,10 @@ import com.mb.android.playbackmediator.cast.exceptions.CastException;
 import com.mb.android.playbackmediator.cast.exceptions.NoConnectionException;
 import com.mb.android.playbackmediator.cast.exceptions.OnFailedListener;
 import com.mb.android.playbackmediator.cast.exceptions.TransientNetworkDisconnectionException;
-import com.mb.android.R;
 
 import java.net.URL;
+
+import com.mb.android.R;
 
 import static com.mb.android.playbackmediator.utils.LogUtils.LOGE;
 

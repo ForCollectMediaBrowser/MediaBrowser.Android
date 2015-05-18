@@ -16,17 +16,18 @@ import android.widget.TextView;
 
 import com.mb.android.MainApplication;
 import com.mb.android.R;
-import com.mb.android.utils.Utils;
-import mediabrowser.apiinteraction.ApiClient;
 import com.mb.android.logging.AppLogger;
+import com.mb.android.utils.Utils;
 import com.mb.android.widget.AnimatedNetworkImageView;
+
+import java.util.Date;
+import java.util.List;
+
+import mediabrowser.apiinteraction.ApiClient;
 import mediabrowser.model.dto.BaseItemDto;
 import mediabrowser.model.dto.ImageOptions;
 import mediabrowser.model.entities.ImageType;
 import mediabrowser.model.entities.LocationType;
-
-import java.util.Date;
-import java.util.List;
 
 /**
  * Created by Mark on 12/12/13.

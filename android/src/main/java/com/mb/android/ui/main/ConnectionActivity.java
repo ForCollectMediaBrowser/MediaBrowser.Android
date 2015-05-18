@@ -24,10 +24,15 @@ import com.mb.android.DialogFragments.IncognitoLoginDialogFragment;
 import com.mb.android.DialogFragments.LoginPasswordDialogFragment;
 import com.mb.android.DialogFragments.ServerConnectionDialogFragment;
 import com.mb.android.MainApplication;
-import com.mb.android.R;
-import com.mb.android.ui.mobile.homescreen.HomescreenActivity;
 import com.mb.android.interfaces.IServerDialogClickListener;
 import com.mb.android.logging.AppLogger;
+import com.mb.android.ui.mobile.homescreen.HomescreenActivity;
+
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
+
+import com.mb.android.R;
 import mediabrowser.apiinteraction.ConnectionResult;
 import mediabrowser.apiinteraction.Response;
 import mediabrowser.apiinteraction.android.AndroidApiClient;
@@ -35,10 +40,6 @@ import mediabrowser.model.apiclient.ServerInfo;
 import mediabrowser.model.dto.UserDto;
 import mediabrowser.model.net.HttpException;
 import mediabrowser.model.users.AuthenticationResult;
-
-import java.io.UnsupportedEncodingException;
-import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
 
 
 public class ConnectionActivity extends FragmentActivity implements IServerDialogClickListener, ILoginDialogListener {

@@ -13,13 +13,14 @@ import android.widget.TextView;
 import com.android.volley.toolbox.NetworkImageView;
 import com.mb.android.MainApplication;
 import com.mb.android.R;
-import mediabrowser.apiinteraction.ApiClient;
 import com.mb.android.logging.AppLogger;
+
+import java.util.List;
+
+import mediabrowser.apiinteraction.ApiClient;
 import mediabrowser.model.dto.BaseItemDto;
 import mediabrowser.model.dto.ImageOptions;
 import mediabrowser.model.entities.ImageType;
-
-import java.util.List;
 
 /**
  * Created by Mark on 12/12/13.

@@ -21,18 +21,21 @@ import com.mb.android.MainApplication;
 import com.mb.android.R;
 import com.mb.android.activities.mobile.MediaDetailsActivity;
 import com.mb.android.activities.mobile.SeriesViewActivity;
-import com.mb.android.utils.Utils;
-import mediabrowser.apiinteraction.Response;
 import com.mb.android.logging.AppLogger;
+import com.mb.android.utils.Utils;
+
+import java.text.SimpleDateFormat;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.TimeZone;
+
+import mediabrowser.apiinteraction.Response;
 import mediabrowser.model.dto.BaseItemDto;
 import mediabrowser.model.dto.ImageOptions;
 import mediabrowser.model.entities.ImageType;
 import mediabrowser.model.querying.ItemFields;
 import mediabrowser.model.querying.LatestItemsQuery;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.TimeZone;
 
 /**
  * Created by Mark on 12/12/13.
@@ -48,6 +51,28 @@ public class LatestItemsDialogFragment extends DialogFragment {
     private NetworkImageView mHeaderImage;
     private ListView mLatestItemsList;
     private BaseItemDto[] mLatestItems;
+
+    private Comparator<BaseItemDto> baseItemDtoComparator = new Comparator<BaseItemDto>() {
+        @Override
+        public int compare(BaseItemDto baseItemDto, BaseItemDto t1) {
+            return compareEpisodeName(baseItemDto, t1);
+        }
+    };
+
+    private int compareEpisodeName(BaseItemDto item1, BaseItemDto item2) {
+        if (item1.getParentIndexNumber() != null && item1.getIndexNumber() != null && item2.getParentIndexNumber() != null && item2.getIndexNumber() != null) {
+            try {
+                int compareResult=item1.getParentIndexNumber().compareTo(item2.getParentIndexNumber());
+                if(compareResult==0)compareResult=item1.getIndexNumber().compareTo(item2.getIndexNumber());
+                return compareResult;
+            } catch (Exception e) {
+                AppLogger.getLogger().ErrorException("Error setting episode text", e);
+                return item1.getName().compareTo(item2.getName());
+            }
+        } else {
+            return item1.getName().compareTo(item2.getName());
+        }
+    }
 
     /**
      * Class Constructor
@@ -128,6 +153,8 @@ public class LatestItemsDialogFragment extends DialogFragment {
                 AppLogger.getLogger().Debug("LatestItemsDialogFragment", "mLatestItems was null");
                 return;
             }
+
+            Arrays.sort(mLatestItems, baseItemDtoComparator);
 
             AppLogger.getLogger().Debug("LatestItemsDialogFragment", String.valueOf(mLatestItems.length) + " Items returned");
 

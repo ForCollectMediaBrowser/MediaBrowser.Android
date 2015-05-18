@@ -8,7 +8,6 @@ import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -18,6 +17,7 @@ import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.PagerTitleStrip;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,40 +26,39 @@ import android.widget.ListView;
 import android.widget.ViewSwitcher;
 
 import com.android.volley.toolbox.NetworkImageView;
+import com.mb.android.DialogFragments.StreamSelectionDialogFragment;
 import com.mb.android.MainApplication;
+import com.mb.android.PlaylistItem;
+import com.mb.android.R;
 import com.mb.android.activities.BaseMbMobileActivity;
 import com.mb.android.adapters.ResumeDialogAdapter;
-import mediabrowser.apiinteraction.Response;
-
+import com.mb.android.fragments.MediaActorsFragment;
+import com.mb.android.fragments.MediaOverviewFragment;
+import com.mb.android.fragments.NavigationMenuFragment;
 import com.mb.android.logging.AppLogger;
 import com.mb.android.playbackmediator.cast.exceptions.NoConnectionException;
 import com.mb.android.playbackmediator.cast.exceptions.TransientNetworkDisconnectionException;
 import com.mb.android.playbackmediator.widgets.MiniController;
-import com.mb.android.DialogFragments.StreamSelectionDialogFragment;
-import com.mb.android.PlaylistItem;
-import com.mb.android.R;
-import com.mb.android.fragments.NavigationMenuFragment;
 import com.mb.android.player.AudioService;
 import com.mb.android.ui.mobile.homescreen.HomescreenActivity;
 import com.mb.android.ui.mobile.playback.PlaybackActivity;
 import com.mb.android.utils.Utils;
-import mediabrowser.model.dlna.StreamInfo;
-import mediabrowser.model.dto.BaseItemDto;
-import mediabrowser.model.dto.ImageOptions;
-import mediabrowser.model.dto.UserItemDataDto;
-import mediabrowser.model.querying.ItemsResult;
-import mediabrowser.model.querying.ThemeMediaResult;
-import mediabrowser.model.entities.ImageType;
-import mediabrowser.model.entities.LocationType;
-import mediabrowser.model.library.PlayAccess;
-import com.mb.android.fragments.MediaActorsFragment;
-import com.mb.android.fragments.MediaOverviewFragment;
-
-import mediabrowser.model.session.PlayCommand;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import mediabrowser.apiinteraction.Response;
+import mediabrowser.model.dlna.StreamInfo;
+import mediabrowser.model.dto.BaseItemDto;
+import mediabrowser.model.dto.ImageOptions;
+import mediabrowser.model.dto.UserItemDataDto;
+import mediabrowser.model.entities.ImageType;
+import mediabrowser.model.entities.LocationType;
+import mediabrowser.model.library.PlayAccess;
+import mediabrowser.model.querying.ItemsResult;
+import mediabrowser.model.querying.ThemeMediaResult;
+import mediabrowser.model.session.PlayCommand;
 
 /**
  * Created by Mark on 12/12/13.

@@ -4,8 +4,8 @@ import android.app.SearchManager;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -13,24 +13,25 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 import com.mb.android.MainApplication;
-import com.mb.android.activities.BaseMbMobileActivity;
-import com.mb.android.ui.mobile.library.LibraryPresentationActivity;
-import com.mb.android.ui.mobile.person.ActorBioActivity;
-import mediabrowser.apiinteraction.Response;
-import com.mb.android.playbackmediator.widgets.MiniController;
 import com.mb.android.R;
+import com.mb.android.activities.BaseMbMobileActivity;
 import com.mb.android.adapters.SearchResultsAdapter;
 import com.mb.android.fragments.NavigationMenuFragment;
+import com.mb.android.logging.AppLogger;
+import com.mb.android.playbackmediator.widgets.MiniController;
 import com.mb.android.ui.mobile.album.MusicAlbumActivity;
+import com.mb.android.ui.mobile.library.LibraryPresentationActivity;
 import com.mb.android.ui.mobile.musicartist.ArtistActivity;
+import com.mb.android.ui.mobile.person.ActorBioActivity;
+
+import java.util.Arrays;
+
+import mediabrowser.apiinteraction.Response;
 import mediabrowser.apiinteraction.android.GsonJsonSerializer;
 import mediabrowser.model.dto.BaseItemDto;
 import mediabrowser.model.search.SearchHint;
 import mediabrowser.model.search.SearchHintResult;
-import com.mb.android.logging.AppLogger;
 import mediabrowser.model.search.SearchQuery;
-
-import java.util.Arrays;
 
 /**
  * Created by Mark on 12/12/13.

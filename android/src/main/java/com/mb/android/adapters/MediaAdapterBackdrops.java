@@ -18,18 +18,19 @@ import android.widget.TextView;
 import com.android.volley.toolbox.NetworkImageView;
 import com.mb.android.MainApplication;
 import com.mb.android.R;
-import com.mb.android.utils.Utils;
-import mediabrowser.apiinteraction.ApiClient;
-import mediabrowser.model.dto.BaseItemDto;
-import mediabrowser.model.dto.ImageOptions;
-import mediabrowser.model.entities.ImageType;
-import mediabrowser.model.entities.LocationType;
 import com.mb.android.logging.AppLogger;
+import com.mb.android.utils.Utils;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+
+import mediabrowser.apiinteraction.ApiClient;
+import mediabrowser.model.dto.BaseItemDto;
+import mediabrowser.model.dto.ImageOptions;
+import mediabrowser.model.entities.ImageType;
+import mediabrowser.model.entities.LocationType;
 
 /**
  * Created by Mark on 12/12/13.

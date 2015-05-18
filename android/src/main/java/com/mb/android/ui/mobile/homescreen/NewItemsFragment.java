@@ -15,21 +15,22 @@ import com.mb.android.DialogFragments.LatestItemsDialogFragment;
 import com.mb.android.MainApplication;
 import com.mb.android.PlaylistItem;
 import com.mb.android.R;
-import mediabrowser.apiinteraction.Response;
-import com.mb.android.ui.mobile.musicartist.ArtistActivity;
 import com.mb.android.activities.mobile.BookDetailsActivity;
-import com.mb.android.ui.mobile.library.LibraryPresentationActivity;
 import com.mb.android.activities.mobile.MediaDetailsActivity;
-import com.mb.android.ui.mobile.album.MusicAlbumActivity;
 import com.mb.android.activities.mobile.PhotoDetailsActivity;
 import com.mb.android.adapters.HomeScreenItemsAdapter;
-import com.mb.android.ui.mobile.playback.PlaybackActivity;
-import mediabrowser.model.dto.BaseItemDto;
-import mediabrowser.model.querying.ItemFields;
 import com.mb.android.logging.AppLogger;
-import mediabrowser.model.querying.LatestItemsQuery;
+import com.mb.android.ui.mobile.album.MusicAlbumActivity;
+import com.mb.android.ui.mobile.library.LibraryPresentationActivity;
+import com.mb.android.ui.mobile.musicartist.ArtistActivity;
+import com.mb.android.ui.mobile.playback.PlaybackActivity;
 
 import java.util.ArrayList;
+
+import mediabrowser.apiinteraction.Response;
+import mediabrowser.model.dto.BaseItemDto;
+import mediabrowser.model.querying.ItemFields;
+import mediabrowser.model.querying.LatestItemsQuery;
 
 /**
  * Created by Mark on 12/12/13.
@@ -40,10 +41,9 @@ public class NewItemsFragment extends Fragment {
 
     private static final String TAG = "NewItemsFragment";
     private BaseItemDto[] mItems;
-    private ProgressBar mActivityIndicator;
-    private GridView mNewItemsGrid;
-    private TextView noContentText;
-
+    private ProgressBar   mActivityIndicator;
+    private GridView      mNewItemsGrid;
+    private TextView      noContentText;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -113,6 +113,7 @@ public class NewItemsFragment extends Fragment {
 
     private void refreshOrInitializeGridContent() {
         if (mNewItemsGrid == null) return;
+
         HomeScreenItemsAdapter adapter = (HomeScreenItemsAdapter) mNewItemsGrid.getAdapter();
         if (adapter != null) {
             adapter.addNewDataset(mItems);

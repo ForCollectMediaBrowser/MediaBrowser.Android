@@ -8,8 +8,8 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.text.Html;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,20 +23,20 @@ import android.widget.TextView;
 
 import com.android.volley.toolbox.NetworkImageView;
 import com.mb.android.MainApplication;
-import com.mb.android.activities.BaseMbMobileActivity;
-import mediabrowser.apiinteraction.Response;
-
-import com.mb.android.playbackmediator.widgets.MiniController;
 import com.mb.android.R;
+import com.mb.android.activities.BaseMbMobileActivity;
 import com.mb.android.fragments.NavigationMenuFragment;
-import mediabrowser.model.dto.BaseItemDto;
-import mediabrowser.model.dto.ImageOptions;
-import mediabrowser.model.entities.ItemReview;
-import mediabrowser.model.entities.ImageType;
-import mediabrowser.model.results.ItemReviewsResult;
+import com.mb.android.playbackmediator.widgets.MiniController;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import mediabrowser.apiinteraction.Response;
+import mediabrowser.model.dto.BaseItemDto;
+import mediabrowser.model.dto.ImageOptions;
+import mediabrowser.model.entities.ImageType;
+import mediabrowser.model.entities.ItemReview;
+import mediabrowser.model.results.ItemReviewsResult;
 
 /**
  * Created by Mark on 12/12/13.

@@ -137,7 +137,7 @@ public class HomeScreenItemsAdapter extends BaseAdapter {
             }
         }
 
-        boolean showText = true;
+        boolean showText = false;
 
         try {
 

@@ -4,7 +4,6 @@ import android.app.ActivityManager;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import android.provider.Settings;
 import android.text.Editable;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -12,22 +11,8 @@ import android.widget.Toast;
 
 import com.mb.android.MainApplication;
 import com.mb.android.R;
-import com.mb.network.Connectivity;
-
-import mediabrowser.apiinteraction.Response;
-import mediabrowser.apiinteraction.android.profiles.AndroidProfile;
-import mediabrowser.model.dlna.AudioOptions;
-import mediabrowser.model.dlna.PlaybackException;
-import mediabrowser.model.dlna.StreamBuilder;
-import mediabrowser.model.dlna.StreamInfo;
-import mediabrowser.model.dlna.VideoOptions;
-import mediabrowser.model.dto.BaseItemDto;
 import com.mb.android.logging.AppLogger;
-
-import mediabrowser.model.dto.MediaSourceInfo;
-import mediabrowser.model.entities.MediaStream;
-import mediabrowser.model.entities.SeriesStatus;
-import mediabrowser.model.livetv.RecordingInfoDto;
+import com.mb.network.Connectivity;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -35,6 +20,17 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 import java.util.TimeZone;
+
+import mediabrowser.apiinteraction.Response;
+import mediabrowser.model.dlna.AudioOptions;
+import mediabrowser.model.dlna.PlaybackException;
+import mediabrowser.model.dlna.StreamInfo;
+import mediabrowser.model.dlna.VideoOptions;
+import mediabrowser.model.dto.BaseItemDto;
+import mediabrowser.model.dto.MediaSourceInfo;
+import mediabrowser.model.entities.MediaStream;
+import mediabrowser.model.entities.SeriesStatus;
+import mediabrowser.model.livetv.RecordingInfoDto;
 
 /**
  * Created by Mark on 11/12/13.

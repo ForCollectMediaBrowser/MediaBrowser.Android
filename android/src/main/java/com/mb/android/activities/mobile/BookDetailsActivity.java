@@ -11,8 +11,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,21 +24,22 @@ import android.widget.Toast;
 
 import com.android.volley.toolbox.NetworkImageView;
 import com.mb.android.MainApplication;
-import com.mb.android.activities.BaseMbMobileActivity;
-import mediabrowser.apiinteraction.Response;
-import com.mb.android.playbackmediator.widgets.MiniController;
 import com.mb.android.R;
+import com.mb.android.activities.BaseMbMobileActivity;
 import com.mb.android.fragments.NavigationMenuFragment;
+import com.mb.android.logging.AppLogger;
+import com.mb.android.playbackmediator.widgets.MiniController;
 import com.mb.android.utils.Utils;
+
+import java.io.File;
+
+import mediabrowser.apiinteraction.Response;
 import mediabrowser.model.dto.BaseItemDto;
 import mediabrowser.model.dto.BaseItemPerson;
 import mediabrowser.model.dto.ImageOptions;
 import mediabrowser.model.dto.UserItemDataDto;
 import mediabrowser.model.entities.ImageType;
 import mediabrowser.model.library.PlayAccess;
-import com.mb.android.logging.AppLogger;
-
-import java.io.File;
 
 /**
  * Created by Mark on 12/12/13.

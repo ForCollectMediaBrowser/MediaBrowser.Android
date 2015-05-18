@@ -44,7 +44,6 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 import com.mb.android.MainApplication;
-import com.mb.android.R;
 import com.mb.android.mediaroute.MediaBrowserControlIntent;
 import com.mb.android.mediaroute.MediaBrowserRouteProvider;
 import com.mb.android.playbackmediator.cast.callbacks.IBaseCastConsumer;
@@ -61,6 +60,8 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
+import com.mb.android.R;
 
 import static com.mb.android.playbackmediator.utils.LogUtils.LOGD;
 import static com.mb.android.playbackmediator.utils.LogUtils.LOGE;

@@ -3,10 +3,8 @@ package com.mb.android.DialogFragments;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,12 +18,11 @@ import com.mb.android.R;
 import com.mb.android.logging.AppLogger;
 import com.mb.android.ui.mobile.playback.PlaybackActivity;
 import com.mb.android.utils.Utils;
+
+import java.util.List;
+
 import mediabrowser.model.dlna.StreamInfo;
 import mediabrowser.model.entities.MediaStream;
-import mediabrowser.model.entities.MediaStreamType;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Mark on 2014-07-25.

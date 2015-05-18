@@ -3,8 +3,8 @@ package com.mb.android.activities.mobile;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -12,22 +12,23 @@ import android.widget.GridView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.mb.android.activities.BaseMbMobileActivity;
-import com.mb.android.adapters.ChannelsAdapter;
-import mediabrowser.apiinteraction.Response;
-import com.mb.android.playbackmediator.widgets.MiniController;
 import com.mb.android.MainApplication;
 import com.mb.android.R;
+import com.mb.android.activities.BaseMbMobileActivity;
+import com.mb.android.adapters.ChannelsAdapter;
 import com.mb.android.fragments.NavigationMenuFragment;
+import com.mb.android.playbackmediator.widgets.MiniController;
+
+import java.util.Arrays;
+import java.util.List;
+
+import mediabrowser.apiinteraction.Response;
 import mediabrowser.model.channels.ChannelItemQuery;
 import mediabrowser.model.channels.ChannelQuery;
 import mediabrowser.model.dto.BaseItemDto;
 import mediabrowser.model.entities.SortOrder;
 import mediabrowser.model.querying.ItemsResult;
 import tangible.DotNetToJavaStringHelper;
-
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * Created by Mark on 12/12/13.

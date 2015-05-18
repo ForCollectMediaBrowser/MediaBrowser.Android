@@ -22,6 +22,7 @@ import com.mb.android.BuildConfig;
 import com.mb.android.logging.AppLogger;
 import com.mb.android.playbackmediator.cast.BaseCastManager;
 
+
 /**
  * Provides a simple wrapper to control logging in development vs production environment. This
  * library should only use the wrapper methods that this class provides.

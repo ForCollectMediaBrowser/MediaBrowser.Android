@@ -36,15 +36,12 @@ import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 import com.google.gson.Gson;
+import com.mb.android.MainApplication;
 import com.mb.android.chromecast.CommandPayload;
 import com.mb.android.chromecast.DataMessage;
 import com.mb.android.chromecast.DisplayCommandItemData;
-import com.mb.android.MainApplication;
 import com.mb.android.chromecast.PlayCommandItemData;
-import com.mb.android.R;
 import com.mb.android.chromecast.StreamSelectionCommandData;
-import mediabrowser.apiinteraction.Response;
-
 import com.mb.android.logging.AppLogger;
 import com.mb.android.mediaroute.MediaBrowserControlIntent;
 import com.mb.android.playbackmediator.cast.callbacks.IVideoCastConsumer;
@@ -66,14 +63,6 @@ import com.mb.android.playbackmediator.widgets.MiniController;
 import com.mb.android.player.AudioPlayerListener;
 import com.mb.android.player.AudioService;
 import com.mb.android.ui.mobile.playback.AudioPlaybackActivity;
-import mediabrowser.model.dto.BaseItemDto;
-import mediabrowser.model.dto.ImageOptions;
-import mediabrowser.model.entities.ImageType;
-import mediabrowser.model.livetv.ChannelInfoDto;
-import mediabrowser.model.querying.SessionQuery;
-import mediabrowser.model.session.PlayCommand;
-import mediabrowser.model.session.PlayRequest;
-import mediabrowser.model.session.SessionInfoDto;
 
 import org.json.JSONObject;
 
@@ -85,6 +74,17 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
+import com.mb.android.R;
+import mediabrowser.apiinteraction.Response;
+import mediabrowser.model.dto.BaseItemDto;
+import mediabrowser.model.dto.ImageOptions;
+import mediabrowser.model.entities.ImageType;
+import mediabrowser.model.livetv.ChannelInfoDto;
+import mediabrowser.model.querying.SessionQuery;
+import mediabrowser.model.session.PlayCommand;
+import mediabrowser.model.session.PlayRequest;
+import mediabrowser.model.session.SessionInfoDto;
 
 import static com.mb.android.playbackmediator.utils.LogUtils.LOGD;
 import static com.mb.android.playbackmediator.utils.LogUtils.LOGE;
